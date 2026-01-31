@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards & Particles</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <main class="main-container">
+        
+        <section class="content-box">
+            
+            <div class="flip-card" onclick="flipMain()">
+                <div class="flip-inner" id="mainCard">
+                   <div class="flip-front">
+    <span id="infinitive"></span>
+    <div class="card-image-container">
+        <img id="verbImage" src="" alt="">
+    </div>
+    <span class="card-number" id="cardNum"></span>
+</div>
+                    <div class="flip-back" id="meaning"></div>
+                </div>
+            </div>
+
+            <div class="small-cards">
+                <div class="flip-card small" onclick="flipPast()">
+                    <div class="flip-inner" id="pastCard">
+                        <div class="flip-front">Pasado simple</div>
+                        <div class="flip-back" id="pastSimple"></div>
+                    </div>
+                </div>
+
+                <div class="flip-card small" onclick="flipPart()">
+                    <div class="flip-inner" id="partCard">
+                        <div class="flip-front">Pasado participio</div>
+                        <div class="flip-back" id="pastParticiple"></div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="refresh-btn" onclick="newVerb()">⟳ Siguiente Verbo</button>
+            
+        </section>
+    </main>
+
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cards.js"></script>
+</body>
+</html>
+
